@@ -1,0 +1,7 @@
+.table {
+  border: 1px solid blue;
+}
+
+.table td {
+  border: 1px dashed rgb(169, 214, 4);
+}
