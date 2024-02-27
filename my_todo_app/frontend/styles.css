@@ -1,0 +1,68 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background-color: #e5e5e5;
+}
+
+.app {
+  height: 100%;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 0.25rem solid #abcea1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+#addNew {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(171, 206, 161, 0.35);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fa-plus {
+  background-color: #abcea1;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+#todos {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+#todos div {
+  border: 3px solid #abcea1;
+  background-color: #e2eede;
+  border-radius: 6px;
+  padding: 5px;
+  display: grid;
+  gap: 4px;
+}
+
+#todos div .options {
+  justify-self: center;
+  display: flex;
+  gap: 20px;
+}
+
+#todos div .options i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+}

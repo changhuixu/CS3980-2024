@@ -1,5 +1,6 @@
 from typing import Annotated
 from fastapi import APIRouter, HTTPException, Path, status
+from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
 from model import Todo, TodoRequest
@@ -28,7 +29,9 @@ async def add_todo(todo: TodoRequest) -> Todo:
 
 @todo_router.get("/todos")
 async def get_todos() -> dict:
-    return {"todos": todo_list}
+    json = jsonable_encoder(todo_list)
+    return JSONResponse(json)
+    # return {"todos": todo_list}
 
 
 @todo_router.get("/todos/{id}")
