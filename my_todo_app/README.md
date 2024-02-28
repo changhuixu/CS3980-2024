@@ -1,4 +1,6 @@
-# FastAPI
+# FastAPI Todo App
+
+![demo](todo_app.gif)
 
 ## 1. Python virtual environment
 
