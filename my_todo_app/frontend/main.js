@@ -6,7 +6,7 @@ let descEditInput = document.getElementById('desc-edit');
 let todos = document.getElementById('todos');
 let data = [];
 let selectedTodo = {};
-const api = 'http://localhost:8000';
+const api = 'http://127.0.0.1:8000';
 
 function tryAdd() {
   let msg = document.getElementById('msg');
