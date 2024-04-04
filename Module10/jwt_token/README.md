@@ -1,13 +1,20 @@
-# Hashing passwords
+# JWT Token examples
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\activate
-pip install passlib bcrypt==4.0.1
+pip install python-jose[cryptography]
 pip freeze > requirements.txt
-
 ```
 
 ```powershell
 pip install -r requirements.txt
+```
+
+```bash
+openssl rand -hex 32
+```
+
+```powershell
+python main.py
 ```
