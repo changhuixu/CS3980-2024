@@ -1,0 +1,5 @@
+2024-03-29 22:08:58,003 INFO main:21 Application starts up...
+2024-03-29 22:09:16,226 INFO routes.users:21 User [python-web-dev@cs.uiowa.edu] is signing up.
+2024-03-29 22:09:16,240 WARN routes.users:25 	 User [python-web-dev@cs.uiowa.edu] has already signed up.
+2024-03-29 22:09:42,047 INFO routes.users:21 User [python-web-dev@cs.uiowa.edu] is signing up.
+2024-03-29 22:09:42,050 WARN routes.users:25 	 User [python-web-dev@cs.uiowa.edu] has already signed up.

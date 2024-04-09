@@ -1,0 +1,14 @@
+{
+  "cSpell.words": [
+    "anyio",
+    "ASGI",
+    "fastapi",
+    "httpx",
+    "levelname",
+    "passlib",
+    "Pydantic",
+    "pytest",
+    "uvicorn",
+    "venv"
+  ]
+}

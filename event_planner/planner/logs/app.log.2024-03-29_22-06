@@ -1,0 +1,24 @@
+2024-03-29 21:08:15,467 INFO main:21 Application starts up...
+2024-03-29 21:22:26,890 INFO main:21 Application starts up...
+2024-03-29 21:22:34,619 INFO main:21 Application starts up...
+2024-03-29 21:22:56,056 INFO main:21 Application starts up...
+2024-03-29 21:23:10,451 INFO main:21 Application starts up...
+2024-03-29 21:37:43,497 INFO routes.users:21 User [python-web-dev@cs.uiowa.edu] is signing up.
+2024-03-29 21:37:43,696 INFO routes.users:33 	 User [python-web-dev@cs.uiowa.edu] is created.
+2024-03-29 21:37:43,696 INFO httpx:1773 HTTP Request: POST http://app/user/signup "HTTP/1.1 200 OK"
+2024-03-29 21:37:43,928 INFO routes.users:39 User [test-user@cs.uiowa.edu] is signing in the system.
+2024-03-29 21:37:44,100 WARN routes.users:48 	 User [test-user@cs.uiowa.edu] signed in
+2024-03-29 21:37:44,101 INFO httpx:1773 HTTP Request: POST http://app/user/sign-in "HTTP/1.1 200 OK"
+2024-03-29 21:43:01,032 INFO routes.users:21 User [python-web-dev@cs.uiowa.edu] is signing up.
+2024-03-29 21:43:01,229 INFO routes.users:33 	 User [python-web-dev@cs.uiowa.edu] is created.
+2024-03-29 21:43:01,230 INFO httpx:1773 HTTP Request: POST http://app/user/signup "HTTP/1.1 200 OK"
+2024-03-29 21:43:01,423 INFO routes.users:39 User [test-user@cs.uiowa.edu] is signing in the system.
+2024-03-29 21:43:01,584 WARN routes.users:48 	 User [test-user@cs.uiowa.edu] signed in
+2024-03-29 21:43:01,585 INFO httpx:1773 HTTP Request: POST http://app/user/sign-in "HTTP/1.1 200 OK"
+2024-03-29 21:43:30,545 INFO routes.users:21 User [python-web-dev@cs.uiowa.edu] is signing up.
+2024-03-29 21:43:30,740 INFO routes.users:33 	 User [python-web-dev@cs.uiowa.edu] is created.
+2024-03-29 21:43:30,741 INFO httpx:1773 HTTP Request: POST http://app/user/signup "HTTP/1.1 200 OK"
+2024-03-29 21:43:30,916 INFO routes.users:39 User [test-user@cs.uiowa.edu] is signing in the system.
+2024-03-29 21:43:31,093 WARN routes.users:48 	 User [test-user@cs.uiowa.edu] signed in
+2024-03-29 21:43:31,094 INFO httpx:1773 HTTP Request: POST http://app/user/sign-in "HTTP/1.1 200 OK"
+2024-03-29 22:06:03,726 INFO main:21 Application starts up...

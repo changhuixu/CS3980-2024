@@ -1,0 +1,150 @@
+<h2>Events</h2>
+<div class="d-flex justify-content-end">
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    (click)="open(newModal)"
+  >
+    Add a New Event
+  </button>
+</div>
+<div class="table-responsive mt-2">
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Tags</th>
+        <th>Creator</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of events">
+        <td class="align-middle">{{ item.title }}</td>
+        <td class="align-middle">{{ item.location }}</td>
+        <td class="align-middle">
+          <span
+            *ngFor="let t of item.tags"
+            class="badge text-bg-secondary me-1"
+          >
+            {{ t }}
+          </span>
+        </td>
+        <td class="align-middle">{{ item.creator }}</td>
+        <td>
+          <a class="btn btn-link" [routerLink]="item._id">Details</a>
+          <button
+            *ngIf="username === item.creator"
+            type="button"
+            class="btn btn-link text-danger"
+            (click)="delete(item._id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #newModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Creating a new Event</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body p-3">
+    <div class="mb-2">
+      <label for="title" class="fw-bold">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="title" />
+    </div>
+    <div class="mb-2">
+      <label for="description" class="fw-bold">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        id="description"
+        [(ngModel)]="description"
+      />
+    </div>
+    <div class="mb-2">
+      <label for="image" class="fw-bold">Image</label>
+      <input type="text" class="form-control" id="image" [(ngModel)]="image" />
+    </div>
+    <div class="mb-2">
+      <label for="location" class="fw-bold">Location</label>
+      <input
+        type="text"
+        class="form-control"
+        id="location"
+        [(ngModel)]="location"
+      />
+    </div>
+    <div class="mb-2">
+      <div class="fw-bold">Tags</div>
+      <div *ngFor="let t of tags" class="ps-3 mb-1">
+        {{ t }}
+        <button class="btn btn-sm btn-danger py-0 px-1" (click)="removeTag(t)">
+          X
+        </button>
+      </div>
+      <hr class="ms-3 w-25" />
+      <div class="ps-3 d-flex">
+        <input
+          type="text"
+          class="form-control me-2"
+          style="max-width: 150px"
+          #nt
+        />
+        <button class="btn btn-sm btn-success" (click)="addTag(nt.value)">
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark me-2"
+      (click)="modal.close()"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="create(createFinishDialog)"
+      [disabled]="busy"
+    >
+      <span *ngIf="!busy">Create</span>
+      <loading-bar *ngIf="busy">Creating...</loading-bar>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #createFinishDialog let-modal>
+  <div class="modal-header bg-success">
+    <h4 class="modal-title" id="modal-title">Successfully Created an Event</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body p-3">The event has been created.</div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark me-2"
+      (click)="modal.close()"
+    >
+      Close
+    </button>
+  </div>
+</ng-template>
